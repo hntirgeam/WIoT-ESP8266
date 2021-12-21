@@ -14,8 +14,8 @@ This sketch is written for WIoT project that can be found here: https://github.c
 #include <Wire.h>
 #include <SoftwareSerial.h>
 
-#define RX_PIN D6                             // MH-Z19B RX pin
-#define TX_PIN D5                             // MH-Z19B TX pin
+#define RX_PIN D6                             // MH-Z19B RX pin. If compiling on linux cause errors here, try using 12  
+#define TX_PIN D5                             // MH-Z19B TX pin                                                 and 14
 #define MHZ19_BAUDRATE 9600                   // Should not be changed
 
 #define SEALEVELPRESSURE_HPA (1013.25)
