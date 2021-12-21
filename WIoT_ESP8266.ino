@@ -23,7 +23,7 @@ This sketch is written for WIoT project that can be found here: https://github.c
 #define WIFI_SSID ""                          // Your Wi-Fi name
 #define WIFI_PASS ""                          // Your Wi-Fi password
 #define BASE_URL  "http://x.x.x.x:x/record/"  // Local or remote url 
-#define UUID ""                               // Device UUID (you'll receive it after device creation)
+#define API_KEY ""                            // Device API_KEY (you'll receive it after device creation)
 
 #define UPDATE_TIME 1000                      // Time between requests
 
@@ -94,11 +94,11 @@ int sendValues(const float & temp, const float & humid, const float & pressure, 
   String msg = "";
 
   msg += "{";
-  msg += "\"uuid\":\"";   msg += UUID;      msg += "\"";     msg += ",";
-  msg += "\"temp\":";     msg += temp;      msg += ",";
-  msg += "\"humidity\":"; msg += humid;     msg += ",";
-  msg += "\"pressure\":"; msg += pressure;  msg += ",";
-  msg += "\"CO2\":";      msg += co2;
+  msg += "\"api_key\":\"";  msg += API_KEY;   msg += "\"";  msg += ",";
+  msg += "\"temp\":";       msg += temp;      msg += ",";
+  msg += "\"humidity\":";   msg += humid;     msg += ",";
+  msg += "\"pressure\":";   msg += pressure;  msg += ",";
+  msg += "\"CO2\":";        msg += co2;
   msg += "}";
 
   int response_code = http.POST(msg);
