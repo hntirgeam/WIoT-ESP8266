@@ -22,7 +22,7 @@ This sketch is written for WIoT project that can be found here: https://github.c
 
 #define WIFI_SSID ""                          // Your Wi-Fi name
 #define WIFI_PASS ""                          // Your Wi-Fi password
-#define BASE_URL  "http://x.x.x.x:x/record/"  // Local or remote url 
+#define BASE_URL  "http://x.x.x.x:x/records/" // Local or remote url 
 #define API_KEY ""                            // Device API_KEY (you'll receive it after device creation)
 
 #define UPDATE_TIME 1000                      // Time between requests
